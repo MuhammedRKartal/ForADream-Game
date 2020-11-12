@@ -1,0 +1,43 @@
+karakter uyanır çadırdan çıkar
+herkes panik halinde sağa sola koşturuyor
+yaşlı adamın çadırını kontrol eder orada mı diye
+yaşlı adam orada değildir
+çan çalma görevi olacak fakat önce birilerine yardım etmek için çadırları veya
+araziyi gezicez
+çan çalma görevi komutanla konuşmadan alınmayacak
+komutana yardım ettikten sonra sana emir  verecek
+çanı çalmaya gidince çan bozuk olacak
+parçaları etrafa savrulmuş haritada
+4 parçayı da bulup
+birleştirir ve tekrar yerine asarsa çanı çalabilir
+haritayı görmek için kulenin tepesinde P tuşuna basar
+ve harita büyür
+kulenin çevresini görür
+4 farklı yerde parçaları görür ve arar
+tek parça kulede yere düşmüş
+tek parça adam kurtarma görevlerinden birinde bir yer yakıp sopa alıyoruz
+aynı zamanda çan parçası da oranın tepesinde olsun ve o da yere düşsün
+3. parçayı bulması için yol kapalı ve yolu açması gerek
+moloz yığını yanıyor
+önce su bulup su dökecek söndürecek
+sonra kürek gibi bişeyle temizleyecek yolu
+su bulunacak yer söylenmeyecek, yemekhane çadırından alması lazım
+adam kurtarmak için bulduğu demir sopayı kürek gibi kullanarak molozları temizleyecek
+sopanın ucuna bişey bağlayıp kürek gibi de kullanabilir
+4. de ağacın yanında kurtarıdığı adamın yanında
+ağacın altında,
+4 ünü de bulduğunda çanı tamir etmek için gidicek ve parçaları doğru yerlere koyacak puzzle gibi
+komutan aynı zamanda anons görevi de verecek
+ve anons için telsiz çadırını bulmamız gerek
+komutan telsiz şifresini söylemeyecek onu kendimiz telsiz odasında kağıtlara bakarak bulacağız
+ve aynı zamanda hangi cepheden yardım isteyeceğimizi söyleyecek örneğin 3
+telsiz şifresi kağıtlarda yuvarlak içinde harfler şeklinde gözükecek
+onu doğru sıraya girince tepede bir harita olacak
+haritadan 3. cephenin kordinatlarını bulacağız ve o cepheden yardım isteyeceğiz
+toplamda 3 adam kurtarılacak biri komutan üzerine dolap devrilmiş biri ağaç dibi
+son adamın üzerine moloz düşmüş onu demir sopayla kurtarıcaz
+aynı zamanda son adamdan çan parçası çıkacak
+sonra yaralıları araba bagajına koyup
+arabaya düz kontak yaptırıp
+diğer cepheye götürür
+sonra orada biraz kalıp düşmana karşı ilk savaşa başlamak için tek başına 2. cepheye geri döner
