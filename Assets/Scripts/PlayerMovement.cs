@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Animator animator;
-    public float moveSpeed = 3f;
+    public float moveSpeed = 5.4f;
     float velX;
     float velY;
     bool facingRight = true;
@@ -30,10 +30,11 @@ public class PlayerMovement : MonoBehaviour
         rigBody.velocity = new Vector2 (velX * moveSpeed , velY);
         
         if(velX == 0f){
-            Debug.Log(velX);
+            //Debug.Log(velX);
             animator.SetBool("isRunning", false);
         }
         else{
+            //Debug.Log(velX);
             animator.SetBool("isRunning", true);
         }
 
