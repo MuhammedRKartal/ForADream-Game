@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour {
 
+	public Dialogue dialogue;
 	public Text nameText;
 	public Text dialogueText;
+
+	
 
 	//public Animator animator;
 
@@ -15,6 +18,9 @@ public class DialogueManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sentences = new Queue<string>();
+
+		FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+
 	}
 
 	public void StartDialogue (Dialogue dialogue)
@@ -52,7 +58,7 @@ public class DialogueManager : MonoBehaviour {
 		foreach (char letter in sentence.ToCharArray())
 		{
 			dialogueText.text += letter;
-			yield return null;
+			yield return new WaitForSeconds(0.06f);
 		}
 	}
 
