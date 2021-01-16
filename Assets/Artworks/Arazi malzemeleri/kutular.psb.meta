@@ -175,50 +175,6 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -198, y: -188}
-  - name: kutu yeni
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 145
-      y: 196
-      width: 85
-      height: 55
-    spriteID: 9bbde16f0112c894f99eeb026d095457
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 134, y: 74}
-  - name: kutu
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 149
-      y: 110
-      width: 89
-      height: 77
-    spriteID: ca3ed4919a7038045a2688958fe4e3d8
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 124, y: -103}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -266,20 +222,6 @@ ScriptedImporter:
     spriteID: f85bd795dfe3b28489619b2059889b9f
     layerID: 23
     mosaicPosition: {x: 4, y: 4}
-  - name: kutu yeni
-    spriteName: kutu yeni
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 9bbde16f0112c894f99eeb026d095457
-    layerID: 20
-    mosaicPosition: {x: 145, y: 196}
-  - name: kutu
-    spriteName: kutu
-    isGroup: 0
-    parentIndex: -1
-    spriteID: ca3ed4919a7038045a2688958fe4e3d8
-    layerID: 13
-    mosaicPosition: {x: 149, y: 110}
   characterData:
     bones: []
     parts: []

@@ -9,9 +9,14 @@ public class DialogueManager : MonoBehaviour {
 	public Text nameText;
 	public Text dialogueText;
 
-	
+	public Text name2Text;
+	public Text dialogue2Text;
 
-	//public Animator animator;
+	public int counter = 0;
+	public int counterLimit;
+
+	public Animator animator;
+	public Animator animator2;
 
 	private Queue<string> sentences;
 
@@ -25,17 +30,13 @@ public class DialogueManager : MonoBehaviour {
 
 	public void StartDialogue (Dialogue dialogue)
 	{
-		//animator.SetBool("IsOpen", true);
-
-		nameText.text = dialogue.name;
-
+		
+		//nameText.text = dialogue.name;
 		sentences.Clear();
-
 		foreach (string sentence in dialogue.sentences)
 		{
 			sentences.Enqueue(sentence);
 		}
-
 		DisplayNextSentence();
 	}
 
@@ -47,10 +48,25 @@ public class DialogueManager : MonoBehaviour {
 			return;
 		}
 
-		string sentence = sentences.Dequeue();
-		StopAllCoroutines();
-		StartCoroutine(TypeSentence(sentence));
+		if(counter%2==0){
+			animator.SetBool("isOpen", true);
+			animator2.SetBool("isOpen", false);
+			string sentence = sentences.Dequeue();
+			StopAllCoroutines();
+			StartCoroutine(TypeSentence(sentence));
+			
+		}
+		else if(counter%2==1){
+			animator2.SetBool("isOpen", true);
+			animator.SetBool("isOpen", false);
+			string sentence = sentences.Dequeue();
+			StopAllCoroutines();
+			StartCoroutine(TypeSentence2(sentence));	
+		}
+
+		counter+=1;
 	}
+
 
 	IEnumerator TypeSentence (string sentence)
 	{
@@ -62,9 +78,20 @@ public class DialogueManager : MonoBehaviour {
 		}
 	}
 
+	IEnumerator TypeSentence2 (string sentence)
+	{
+		dialogue2Text.text = "";
+		foreach (char letter in sentence.ToCharArray())
+		{
+			dialogue2Text.text += letter;
+			yield return new WaitForSeconds(0.06f);
+		}
+	}
+
 	void EndDialogue()
 	{
-		//animator.SetBool("IsOpen", false);
+		animator.SetBool("isOpen", false);
+		animator2.SetBool("isOpen",false);
 	}
 
 }
