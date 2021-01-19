@@ -12,6 +12,8 @@ public class Trigger : MonoBehaviour {
     public Animator animator;
     public GameObject button;
 
+    public string sname;
+
     void Start()
     {
         animator = button.GetComponent<Animator>();
@@ -23,7 +25,7 @@ public class Trigger : MonoBehaviour {
         if(isInRange){
             if(Input.GetKeyDown(interactKey)){
                 interactAction.Invoke();
-                SceneManager.LoadScene(sceneName:"Middle");
+                SceneManager.LoadScene(sceneName: sname);
             }
         }
     }

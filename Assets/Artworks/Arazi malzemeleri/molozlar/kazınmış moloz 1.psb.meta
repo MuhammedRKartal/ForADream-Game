@@ -95,10 +95,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 312
-      width: 98
-      height: 96
-    spriteID: 1c396f4ad4fc2a648bc0da390a92482f
+      y: 335
+      width: 109
+      height: 108
+    spriteID: 845737011187b8b44910daf875be3de0
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -108,7 +108,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -25, y: 120}
+    uvTransform: {x: -477, y: 205}
   - name: "kaz\u0131nm\u0131\u015F moloz 1"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -118,9 +118,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 443
-      height: 300
-    spriteID: 1bd6fc939f0184a4da8e83661f82e48b
+      width: 453
+      height: 323
+    spriteID: 412c1f5dcf75ab0409799abb4e44ac30
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -130,7 +130,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -53, y: 4}
+    uvTransform: {x: 4, y: 4}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -138,7 +138,7 @@ ScriptedImporter:
   importHiddenLayers: 0
   importedTextureWidth: 512
   importedTextureHeight: 512
-  documentSize: {x: 500, y: 300}
+  documentSize: {x: 600, y: 350}
   paperDollMode: 0
   keepDupilcateSpriteName: 0
   spriteCategoryList:
@@ -154,14 +154,14 @@ ScriptedImporter:
     spriteName: "kaz\u0131nm\u0131\u015F toprak 1"
     isGroup: 0
     parentIndex: -1
-    spriteID: 1c396f4ad4fc2a648bc0da390a92482f
+    spriteID: 845737011187b8b44910daf875be3de0
     layerID: 27
-    mosaicPosition: {x: 4, y: 312}
+    mosaicPosition: {x: 4, y: 335}
   - name: "kaz\u0131nm\u0131\u015F moloz 1"
     spriteName: "kaz\u0131nm\u0131\u015F moloz 1"
     isGroup: 0
     parentIndex: -1
-    spriteID: 1bd6fc939f0184a4da8e83661f82e48b
+    spriteID: 412c1f5dcf75ab0409799abb4e44ac30
     layerID: 21
     mosaicPosition: {x: 4, y: 4}
   characterData:

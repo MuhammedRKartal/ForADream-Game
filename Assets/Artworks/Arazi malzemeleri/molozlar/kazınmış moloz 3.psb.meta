@@ -94,11 +94,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 276
-      y: 259
-      width: 211
-      height: 121
-    spriteID: 3e77f91087382a04cb5996e8cea206c6
+      x: 200
+      y: 456
+      width: 201
+      height: 142
+    spriteID: cee250f33c672e847a3ebb9b662f0ba6
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -108,7 +108,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 276, y: 80}
+    uvTransform: {x: -249, y: 355}
   - name: "kaz\u0131nm\u0131\u015F moloz 3"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -116,11 +116,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 259
+      x: 200
+      y: 282
       width: 264
       height: 166
-    spriteID: 84f99b8f94b3a3642a1c900162b66ed8
+    spriteID: 85bbedf2a1cf94c4c89ef72d97bcd11c
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -130,7 +130,29 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -53, y: 258}
+    uvTransform: {x: 173, y: 282}
+  - name: "g\xF6lge 1"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 282
+      width: 188
+      height: 244
+    spriteID: 0a70e0e0b059514459f88fb3000930e4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -7, y: 282}
   - name: "kaz\u0131nm\u0131\u015F moloz 3_1"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -140,9 +162,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 337
-      height: 247
-    spriteID: d67d8461970afc44a9a6cb8350aaf62a
+      width: 433
+      height: 270
+    spriteID: 5b00d5c12bc68d141bf5d663313b20d8
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -152,21 +174,21 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -159, y: -49}
+    uvTransform: {x: -23, y: -53}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
   importedTextureWidth: 512
-  importedTextureHeight: 512
-  documentSize: {x: 500, y: 300}
+  importedTextureHeight: 1024
+  documentSize: {x: 650, y: 350}
   paperDollMode: 0
   keepDupilcateSpriteName: 0
   spriteCategoryList:
     categories: []
   textureActualWidth: 512
-  textureActualHeight: 512
+  textureActualHeight: 1024
   spritePackingTag: 
   resliceFromLayer: 0
   characterMode: 1
@@ -176,21 +198,28 @@ ScriptedImporter:
     spriteName: "kaz\u0131nm\u0131\u015F toprak 3"
     isGroup: 0
     parentIndex: -1
-    spriteID: 3e77f91087382a04cb5996e8cea206c6
+    spriteID: cee250f33c672e847a3ebb9b662f0ba6
     layerID: 8
-    mosaicPosition: {x: 276, y: 259}
+    mosaicPosition: {x: 200, y: 456}
   - name: "kaz\u0131nm\u0131\u015F moloz 3"
     spriteName: "kaz\u0131nm\u0131\u015F moloz 3"
     isGroup: 0
     parentIndex: -1
-    spriteID: 84f99b8f94b3a3642a1c900162b66ed8
+    spriteID: 85bbedf2a1cf94c4c89ef72d97bcd11c
     layerID: 9
-    mosaicPosition: {x: 4, y: 259}
+    mosaicPosition: {x: 200, y: 282}
+  - name: "g\xF6lge 1"
+    spriteName: "g\xF6lge 1"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0a70e0e0b059514459f88fb3000930e4
+    layerID: 11
+    mosaicPosition: {x: 4, y: 282}
   - name: "kaz\u0131nm\u0131\u015F moloz 3"
     spriteName: "kaz\u0131nm\u0131\u015F moloz 3_1"
     isGroup: 0
     parentIndex: -1
-    spriteID: d67d8461970afc44a9a6cb8350aaf62a
+    spriteID: 5b00d5c12bc68d141bf5d663313b20d8
     layerID: 2
     mosaicPosition: {x: 4, y: 4}
   characterData:

@@ -96,9 +96,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 443
-      height: 300
-    spriteID: 0aeef52b86fdf1744beb6cd25672f735
+      width: 457
+      height: 323
+    spriteID: f23caa343d81e12418b279d5dc83954f
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -108,7 +108,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -25, y: 4}
+    uvTransform: {x: 4, y: 4}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -116,7 +116,7 @@ ScriptedImporter:
   importHiddenLayers: 0
   importedTextureWidth: 512
   importedTextureHeight: 512
-  documentSize: {x: 500, y: 300}
+  documentSize: {x: 500, y: 350}
   paperDollMode: 0
   keepDupilcateSpriteName: 0
   spriteCategoryList:
@@ -132,7 +132,7 @@ ScriptedImporter:
     spriteName: moloz
     isGroup: 0
     parentIndex: -1
-    spriteID: 0aeef52b86fdf1744beb6cd25672f735
+    spriteID: f23caa343d81e12418b279d5dc83954f
     layerID: 3
     mosaicPosition: {x: 4, y: 4}
   characterData:

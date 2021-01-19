@@ -95,10 +95,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 312
-      width: 157
-      height: 102
-    spriteID: f9bf8aa6998b760408144afce90117ab
+      y: 335
+      width: 171
+      height: 129
+    spriteID: f2fff1bc8a15b9c429cc523db169cc6d
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -108,7 +108,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -11, y: 116}
+    uvTransform: {x: -425, y: 238}
   - name: "kaz\u0131nm\u0131\u015F moloz 2"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -118,9 +118,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 443
-      height: 300
-    spriteID: 6097cb7f8c75ac74493cc423b170c833
+      width: 453
+      height: 323
+    spriteID: 5b0c3ae0c1fe023458542d1350072214
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -130,7 +130,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -25, y: 4}
+    uvTransform: {x: 4, y: 2}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -138,7 +138,7 @@ ScriptedImporter:
   importHiddenLayers: 0
   importedTextureWidth: 512
   importedTextureHeight: 512
-  documentSize: {x: 500, y: 300}
+  documentSize: {x: 600, y: 350}
   paperDollMode: 0
   keepDupilcateSpriteName: 0
   spriteCategoryList:
@@ -154,14 +154,14 @@ ScriptedImporter:
     spriteName: "kaz\u0131nm\u0131\u015F toprak 2"
     isGroup: 0
     parentIndex: -1
-    spriteID: f9bf8aa6998b760408144afce90117ab
+    spriteID: f2fff1bc8a15b9c429cc523db169cc6d
     layerID: 15
-    mosaicPosition: {x: 4, y: 312}
+    mosaicPosition: {x: 4, y: 335}
   - name: "kaz\u0131nm\u0131\u015F moloz 2"
     spriteName: "kaz\u0131nm\u0131\u015F moloz 2"
     isGroup: 0
     parentIndex: -1
-    spriteID: 6097cb7f8c75ac74493cc423b170c833
+    spriteID: 5b0c3ae0c1fe023458542d1350072214
     layerID: 14
     mosaicPosition: {x: 4, y: 4}
   characterData:
