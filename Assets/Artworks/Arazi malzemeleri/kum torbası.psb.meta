@@ -96,9 +96,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 259
-      height: 212
-    spriteID: ea5f3b64919db1d4d978627824edbeb0
+      width: 260
+      height: 220
+    spriteID: 16e48f1fa1888fd46a12f30d28dd3f86
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -108,7 +108,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -200, y: -60}
+    uvTransform: {x: -11, y: -32}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -132,7 +132,7 @@ ScriptedImporter:
     spriteName: "kum torbas\u0131"
     isGroup: 0
     parentIndex: -1
-    spriteID: ea5f3b64919db1d4d978627824edbeb0
+    spriteID: 16e48f1fa1888fd46a12f30d28dd3f86
     layerID: 30
     mosaicPosition: {x: 4, y: 4}
   characterData:

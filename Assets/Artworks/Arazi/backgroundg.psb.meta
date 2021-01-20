@@ -98,7 +98,7 @@ ScriptedImporter:
       y: 4
       width: 3000
       height: 1800
-    spriteID: 013d4b6b76db28246ba4a3bd1b2d24d2
+    spriteID: f39de993291e6444f9ea51331cacbfcc
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -132,7 +132,7 @@ ScriptedImporter:
     spriteName: Katman 1
     isGroup: 0
     parentIndex: -1
-    spriteID: 013d4b6b76db28246ba4a3bd1b2d24d2
+    spriteID: f39de993291e6444f9ea51331cacbfcc
     layerID: 2
     mosaicPosition: {x: 4, y: 4}
   characterData:

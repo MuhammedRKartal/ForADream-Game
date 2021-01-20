@@ -98,7 +98,7 @@ ScriptedImporter:
       y: 4
       width: 85
       height: 64
-    spriteID: 31897848b6f3df94dbbae93e3273531d
+    spriteID: af51e5a2a9f31944c95cd6102f5ce793
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -132,7 +132,7 @@ ScriptedImporter:
     spriteName: yan bandaj
     isGroup: 0
     parentIndex: -1
-    spriteID: 31897848b6f3df94dbbae93e3273531d
+    spriteID: af51e5a2a9f31944c95cd6102f5ce793
     layerID: 4
     mosaicPosition: {x: 4, y: 4}
   characterData:

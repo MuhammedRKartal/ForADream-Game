@@ -87,7 +87,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Katman 2
+  - name: odun
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -96,9 +96,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 130
-      height: 104
-    spriteID: f331cd8003040d543aa9ae3748caaf3e
+      width: 140
+      height: 88
+    spriteID: 84cdd35cd57e463438498875c530495f
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -108,7 +108,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -49, y: -141}
+    uvTransform: {x: -39, y: -157}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -128,11 +128,11 @@ ScriptedImporter:
   characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Katman 2
-    spriteName: Katman 2
+  - name: odun
+    spriteName: odun
     isGroup: 0
     parentIndex: -1
-    spriteID: f331cd8003040d543aa9ae3748caaf3e
+    spriteID: 84cdd35cd57e463438498875c530495f
     layerID: 3
     mosaicPosition: {x: 4, y: 4}
   characterData:

@@ -98,7 +98,7 @@ ScriptedImporter:
       y: 4
       width: 110
       height: 240
-    spriteID: 9949d820b7788dc488a0bb4efecd8a91
+    spriteID: 23b6b8bf6969fcf479efbb9f710c6544
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -132,7 +132,7 @@ ScriptedImporter:
     spriteName: dolap
     isGroup: 0
     parentIndex: -1
-    spriteID: 9949d820b7788dc488a0bb4efecd8a91
+    spriteID: 23b6b8bf6969fcf479efbb9f710c6544
     layerID: 3
     mosaicPosition: {x: 4, y: 4}
   characterData:

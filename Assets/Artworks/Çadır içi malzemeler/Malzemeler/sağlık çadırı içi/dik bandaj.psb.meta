@@ -98,7 +98,7 @@ ScriptedImporter:
       y: 4
       width: 41
       height: 54
-    spriteID: 5e69bbed86b898d4d89ec526144b3444
+    spriteID: a9c45db4cf989ac4f84a754bbe0b6e32
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -132,7 +132,7 @@ ScriptedImporter:
     spriteName: dik bandaj
     isGroup: 0
     parentIndex: -1
-    spriteID: 5e69bbed86b898d4d89ec526144b3444
+    spriteID: a9c45db4cf989ac4f84a754bbe0b6e32
     layerID: 4
     mosaicPosition: {x: 4, y: 4}
   characterData:

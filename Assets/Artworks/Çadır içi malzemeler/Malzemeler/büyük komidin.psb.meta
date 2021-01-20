@@ -87,7 +87,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: "\xE7ekmece"
+  - name: "b\xFCy\xFCk komidin"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -98,7 +98,7 @@ ScriptedImporter:
       y: 4
       width: 157
       height: 162
-    spriteID: 324be28b01cc9be4ea726e0ff06f88e1
+    spriteID: b3ad01a98804b1d41a68757c2e60dab2
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -128,11 +128,11 @@ ScriptedImporter:
   characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: "\xE7ekmece"
-    spriteName: "\xE7ekmece"
+  - name: "b\xFCy\xFCk komidin"
+    spriteName: "b\xFCy\xFCk komidin"
     isGroup: 0
     parentIndex: -1
-    spriteID: 324be28b01cc9be4ea726e0ff06f88e1
+    spriteID: b3ad01a98804b1d41a68757c2e60dab2
     layerID: 4
     mosaicPosition: {x: 4, y: 4}
   characterData:

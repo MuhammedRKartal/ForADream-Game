@@ -87,29 +87,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: direk yeni
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 612
-      width: 1000
-      height: 573
-    spriteID: e0eadc44c9de5a3478d133ea9f5d36f4
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 585}
-  - name: Arka Plan
+  - name: hava
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -120,7 +98,7 @@ ScriptedImporter:
       y: 4
       width: 1000
       height: 600
-    spriteID: 45aebfa3b928ead4b94a9c05e597f852
+    spriteID: 53fe9ea87061593429a6a96e7fedf221
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -137,32 +115,25 @@ ScriptedImporter:
   documentAlignment: 7
   importHiddenLayers: 0
   importedTextureWidth: 1024
-  importedTextureHeight: 2048
+  importedTextureHeight: 1024
   documentSize: {x: 1000, y: 600}
   paperDollMode: 0
   keepDupilcateSpriteName: 0
   spriteCategoryList:
     categories: []
   textureActualWidth: 1024
-  textureActualHeight: 2048
+  textureActualHeight: 1024
   spritePackingTag: 
   resliceFromLayer: 0
   characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: direk yeni
-    spriteName: direk yeni
+  - name: hava
+    spriteName: hava
     isGroup: 0
     parentIndex: -1
-    spriteID: e0eadc44c9de5a3478d133ea9f5d36f4
-    layerID: 41
-    mosaicPosition: {x: 4, y: 612}
-  - name: Arka Plan
-    spriteName: Arka Plan
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 45aebfa3b928ead4b94a9c05e597f852
-    layerID: 1
+    spriteID: 53fe9ea87061593429a6a96e7fedf221
+    layerID: 15
     mosaicPosition: {x: 4, y: 4}
   characterData:
     bones: []

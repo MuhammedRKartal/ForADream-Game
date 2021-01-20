@@ -98,7 +98,7 @@ ScriptedImporter:
       y: 4
       width: 307
       height: 166
-    spriteID: a25a44e80334c094fbc534d519a01f67
+    spriteID: 19d7bc4108ebd014a9b0fc658978a0a3
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -132,7 +132,7 @@ ScriptedImporter:
     spriteName: yatak
     isGroup: 0
     parentIndex: -1
-    spriteID: a25a44e80334c094fbc534d519a01f67
+    spriteID: 19d7bc4108ebd014a9b0fc658978a0a3
     layerID: 2
     mosaicPosition: {x: 4, y: 4}
   characterData:

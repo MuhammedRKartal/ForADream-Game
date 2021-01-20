@@ -16,7 +16,7 @@ public class Trigger : MonoBehaviour {
 
     void Start()
     {
-        animator = button.GetComponent<Animator>();
+        animator = button.GetComponent<Animator>();   
     }
 
     // Update is called once per frame
