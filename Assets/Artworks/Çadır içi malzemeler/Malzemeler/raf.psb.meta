@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e6e4ad78f5dd04428639b2a27576082
+guid: e10b4bd9bb8fecf4da82afc01f16f054
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -87,7 +87,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: "\xE7an"
+  - name: raf
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -96,9 +96,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 800
-      height: 942
-    spriteID: fbe3cf991276e5c4cbe810c425a45553
+      width: 189
+      height: 441
+    spriteID: da1c7c9e12287004aa2096389ee404f4
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -108,32 +108,32 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: -54}
+    uvTransform: {x: -49, y: -55}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
-  importedTextureWidth: 1024
-  importedTextureHeight: 1024
-  documentSize: {x: 800, y: 1000}
+  importedTextureWidth: 256
+  importedTextureHeight: 512
+  documentSize: {x: 300, y: 500}
   paperDollMode: 0
   keepDupilcateSpriteName: 0
   spriteCategoryList:
     categories: []
-  textureActualWidth: 1024
-  textureActualHeight: 1024
+  textureActualWidth: 256
+  textureActualHeight: 512
   spritePackingTag: 
   resliceFromLayer: 0
   characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: "\xE7an"
-    spriteName: "\xE7an"
+  - name: raf
+    spriteName: raf
     isGroup: 0
     parentIndex: -1
-    spriteID: fbe3cf991276e5c4cbe810c425a45553
-    layerID: 32
+    spriteID: da1c7c9e12287004aa2096389ee404f4
+    layerID: 15
     mosaicPosition: {x: 4, y: 4}
   characterData:
     bones: []
@@ -141,7 +141,7 @@ ScriptedImporter:
     dimension: {x: 0, y: 0}
     characterGroups: []
   generateGOHierarchy: 0
-  textureAssetName: "kule ve \xE7an birle\u015Fik Texture"
-  prefabAssetName: "kule ve \xE7an birle\u015Fik Prefab"
-  spriteLibAssetName: "kule ve \xE7an birle\u015Fik Sprite Lib"
+  textureAssetName: raf Texture
+  prefabAssetName: raf Prefab
+  spriteLibAssetName: raf Sprite Lib
   secondarySpriteTextures: []

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour {
 
@@ -15,10 +16,15 @@ public class DialogueManager : MonoBehaviour {
 	public int counter = 0;
 	public int counterLimit;
 
+	private float timer = 0;
+    private float timerMax = 0;
+    private bool waiting = false;
+
 	public Animator animator;
 	public Animator animator2;
 
 	private Queue<string> sentences;
+	public string sname;
 
 	// Use this for initialization
 	void Start () {
@@ -45,6 +51,7 @@ public class DialogueManager : MonoBehaviour {
 		if (sentences.Count == 0)
 		{
 			EndDialogue();
+			SceneManager.LoadScene(sceneName: sname);
 			return;
 		}
 
@@ -93,5 +100,14 @@ public class DialogueManager : MonoBehaviour {
 		animator.SetBool("isOpen", false);
 		animator2.SetBool("isOpen",false);
 	}
+
+	private bool Waited(float seconds)
+    {
+        timerMax = seconds;
+        timer += Time.deltaTime;
+        if (timer >= timerMax) {return true;}
+        return false;
+    }
+
 
 }

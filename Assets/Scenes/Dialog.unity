@@ -595,6 +595,7 @@ MonoBehaviour:
   counterLimit: 0
   animator: {fileID: 1992503847}
   animator2: {fileID: 646106380}
+  sname: MedicTentAfterDialogue
 --- !u!1 &1484991494
 GameObject:
   m_ObjectHideFlags: 0

@@ -581,8 +581,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1042286473}
   - component: {fileID: 1042286472}
+  - component: {fileID: 1042286474}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Director
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,6 +624,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1042286474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042286471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98a49cc79f677549ac5075d9ac6c2bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeline: {fileID: 1042286472}
 --- !u!1 &1083996427
 GameObject:
   m_ObjectHideFlags: 0

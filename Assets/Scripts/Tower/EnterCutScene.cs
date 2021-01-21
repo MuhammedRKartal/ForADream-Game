@@ -38,7 +38,7 @@ public class EnterCutScene : MonoBehaviour
             
         }
     }
-
+    
     private bool Waited(float seconds)
     {
         timerMax = seconds;

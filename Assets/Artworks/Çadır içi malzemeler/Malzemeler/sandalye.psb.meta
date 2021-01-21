@@ -87,7 +87,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Katman 1
+  - name: sandalye
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -98,7 +98,7 @@ ScriptedImporter:
       y: 4
       width: 209
       height: 247
-    spriteID: e35592fe39b5d8e4c81089cbfceb60bf
+    spriteID: ff8fe5992f49dcd429a0aae8be6676c0
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -128,11 +128,11 @@ ScriptedImporter:
   characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Katman 1
-    spriteName: Katman 1
+  - name: sandalye
+    spriteName: sandalye
     isGroup: 0
     parentIndex: -1
-    spriteID: e35592fe39b5d8e4c81089cbfceb60bf
+    spriteID: ff8fe5992f49dcd429a0aae8be6676c0
     layerID: 3
     mosaicPosition: {x: 4, y: 4}
   characterData:

@@ -51,23 +51,23 @@ public class PlayerMovement : MonoBehaviour
         else{
             if(counter == 1){
                 moloz.SetActive(false);
-                molozArray[0].transform.position = moloz.transform.position;
+                /*molozArray[0].transform.position = moloz.transform.position;
                 molozArray[0].transform.rotation = moloz.transform.rotation;
-                molozArray[0].transform.localScale = moloz.transform.localScale;
+                molozArray[0].transform.localScale = moloz.transform.localScale;*/
                 molozArray[0].SetActive(true);
             }
             else if(counter == 2){
                 molozArray[0].SetActive(false);
-                molozArray[1].transform.position = moloz.transform.position;
+                /*molozArray[1].transform.position = moloz.transform.position;
                 molozArray[1].transform.rotation = moloz.transform.rotation;
-                molozArray[1].transform.localScale = moloz.transform.localScale;
+                molozArray[1].transform.localScale = moloz.transform.localScale;*/
                 molozArray[1].SetActive(true);
             }
             else if(counter == 3){
                 molozArray[1].SetActive(false);
-                molozArray[2].transform.position = moloz.transform.position;
+                /*molozArray[2].transform.position = moloz.transform.position;
                 molozArray[2].transform.rotation = moloz.transform.rotation;
-                molozArray[2].transform.localScale = moloz.transform.localScale;
+                molozArray[2].transform.localScale = moloz.transform.localScale;*/
                 molozArray[2].SetActive(true);
                 llider.SetActive(false);
 
