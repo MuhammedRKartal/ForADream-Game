@@ -934,9 +934,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  animator: {fileID: 869446696}
-  button: {fileID: 869446692}
-  sname: MiddleZone
+  animator: {fileID: 1560108524}
+  button: {fileID: 1560108522}
+  sname: MiddleInWar
 --- !u!61 &821046743
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2499,6 +2499,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5458096005586496181, guid: 6291bb00629f57c47b2d71847c286784,
     type: 3}
   m_PrefabInstance: {fileID: 1551395699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1560108522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 278246656475441371, guid: 78f65f9bd4fd7e944a0903690adef234,
+    type: 3}
+  m_PrefabInstance: {fileID: 1423595449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1560108524 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 278246656475441367, guid: 78f65f9bd4fd7e944a0903690adef234,
+    type: 3}
+  m_PrefabInstance: {fileID: 1423595449}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1563142127
 GameObject:

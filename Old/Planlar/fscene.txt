@@ -1,0 +1,20 @@
+karakter soldaki çadırların önünden başlayacak
+sonra ileri geri yapabilir tıbbi çadıra gelince E tuşuna basabilecek
+içeri girmek için
+içeride hemşireye bandaj götürme görevi olacak
+med kit kullanma öğretilecek
+bi hastanın rangesine girince konuşma balonu çıkar yardım ister
+iletişime geçebilirsin ama yanından geçip gidebilirsin de
+sonra hemşire çağırmak için F e basıcaz çünkü adam bağıramıyor
+çadırdaki görevler bitince ya da çıkmak isteyince çadırın kapısına gidip yine E basacak
+ilerleyince oturan yaşlı adamı görecek
+sohbet edecekler
+sonra çorba almaya gidecek beraber çorba içerken sohbete devam edecekler
+burası da bitince ileride eğitim alanı olacak
+ctrl ile eğilerek bişeyin alıtndan geçme, zıplama
+bomba atma, dinamit yerleştirme gibi şeyler öğretilecek
+burdan çıkınca yatmak için çadırına gidebilecek
+eğer eğitim bitmeden çadıra girmek isterse, nöbetci asker durduracak
+yemek çadırında aşçıya sandıktan patates götürme görevi
+en son çadıra girince uyur ve uyanınca yan çadıra bomba felan düşer
+böylelikle esas savaş başlar

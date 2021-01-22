@@ -2476,7 +2476,7 @@ MonoBehaviour:
       m_Calls: []
   animator: {fileID: 275031549}
   button: {fileID: 275031548}
-  sname: 
+  sname: WeaponTent
 --- !u!61 &882895613
 BoxCollider2D:
   m_ObjectHideFlags: 0
