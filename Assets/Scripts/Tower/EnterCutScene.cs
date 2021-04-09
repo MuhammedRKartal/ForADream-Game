@@ -5,7 +5,8 @@ using UnityEngine.Playables;
 
 public class EnterCutScene : MonoBehaviour
 {
-    public PlayableDirector timeline;
+    public GameObject player;
+    PlayableDirector pd;
     private int counter = 0;
     private float timer = 0;
     private float timerMax = 0;
@@ -13,14 +14,16 @@ public class EnterCutScene : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        timeline = GetComponent<PlayableDirector>();
+        pd = player.GetComponent<PlayableDirector>();
     }
 
     private void OnTriggerEnter2D(Collider2D c)
     {
+        
         if (c.gameObject.tag == "Player")
         {
-            timeline.Stop();
+            Debug.Log("hey");
+            pd.Play();
         }
     }
  
@@ -33,7 +36,7 @@ public class EnterCutScene : MonoBehaviour
                 if(!Waited(4.8f)){
                     return;
                 } 
-                timeline.Play(); 
+                pd.Stop(); 
             }
             
         }

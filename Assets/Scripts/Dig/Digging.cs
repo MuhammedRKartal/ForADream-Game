@@ -12,30 +12,66 @@ public bool isInRange;
     public Animator animator;
     public GameObject button;
 
-    PlayerMovement move;
+    public GameObject kurek;
     public GameObject player;
 
     private float timer = 0;
     private float timerMax = 0;
+    private bool waiting = false;
+
+    public int counter = 0;
+    public GameObject moloz;
+    public GameObject[] molozArray;
+    public GameObject llider;
+
+    private bool act = false;
 
 
     void Start()
     {
         animator = button.GetComponent<Animator>();
-        move = player.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(move.counter==3){
-            animator.SetBool("isInRange",false);
-            if(!Waited(0.7f)) return;
-            button.SetActive(false);
-        }
         if(isInRange){
             if(Input.GetKeyDown(interactKey)){
                 interactAction.Invoke();
+            }
+        }
+        if(waiting == true){
+            if(!Waited(4.8f)){
+                player.GetComponent<PlayerMovement>().enabled = false;
+                return;
+            }
+            else{
+                player.GetComponent<PlayerMovement>().enabled = true;
+                timer = 0;
+                player.GetComponent<Animator>().SetBool("isDigging", false);
+                kurek.SetActive(false);
+                waiting = false;
+                counter++;
+            }    
+        }
+        else{
+            if(act == false){
+                if(counter == 1){
+                molozArray[0].SetActive(true);
+                Destroy(moloz);
+                }
+                else if(counter == 2){
+                    molozArray[1].SetActive(true);
+                    Destroy(molozArray[0]);
+                    player.GetComponent<Scenee>().backDigged = 1;
+                }
+                else if(counter == 3){
+                    molozArray[2].SetActive(true);
+                    llider.SetActive(false);
+                    Destroy(molozArray[1]);
+                    
+                    
+                }
             }
         }
     }
@@ -63,4 +99,12 @@ public bool isInRange;
         if (timer >= timerMax) {return true;}
         return false;
     }
+
+    public void dig(){
+        Debug.Log("hey");
+        player.GetComponent<Animator>().SetBool("isDigging", true);
+        
+        kurek.SetActive(true);
+        waiting = true;   
+    }  
 }

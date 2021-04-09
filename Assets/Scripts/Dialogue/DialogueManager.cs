@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour {
 
 	private float timer = 0;
     private float timerMax = 0;
-    private bool waiting = false;
+    //private bool waiting = false;
 
 	public Animator animator;
 	public Animator animator2;
