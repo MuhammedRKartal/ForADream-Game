@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Digging : MonoBehaviour
 {
 
-public bool isInRange;
+    public bool isInRange;
     public KeyCode interactKey;
     public UnityEvent interactAction;
     public Animator animator;
@@ -30,6 +30,7 @@ public bool isInRange;
     void Start()
     {
         animator = button.GetComponent<Animator>();
+        player.GetComponent<Scenee>().LoadScene();
     }
 
     // Update is called once per frame
@@ -64,13 +65,12 @@ public bool isInRange;
                     molozArray[1].SetActive(true);
                     Destroy(molozArray[0]);
                     player.GetComponent<Scenee>().backDigged = 1;
+                    player.GetComponent<Scenee>().SaveScene();
                 }
                 else if(counter == 3){
                     molozArray[2].SetActive(true);
                     llider.SetActive(false);
                     Destroy(molozArray[1]);
-                    
-                    
                 }
             }
         }

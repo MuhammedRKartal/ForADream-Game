@@ -10,6 +10,9 @@ public class gameMaster : MonoBehaviour
     public GameObject[] spaceList;
     public GameObject marker;
 
+    public Sprite[] spaceListCopy;
+    
+
     public Button leftButton, dropButton, rightButton, winButton;
     public Text winText;
     bool lInteract = true;
@@ -36,6 +39,7 @@ public class gameMaster : MonoBehaviour
     int WINDOW_LENGTH = 4;
 
     int[,] board = new int[6, 7];
+    
 
     int isDone = 0;
 
@@ -43,83 +47,103 @@ public class gameMaster : MonoBehaviour
     float maxPiecePlace = 210f;
 
 
-    private int calcCount(int[] arr, int piece)
-    {
+    int winCount = 0;
+    
+    
+    void Start(){
+        spaceListCopy = new Sprite[42];
+        for (int i = 0; i<spaceList.Length; i++){
+            spaceListCopy[i] = spaceList[i].GetComponent<Image>().sprite; 
+        }
+        ColUpdate();
+        markerPos = 0;
+        leftButton.onClick.AddListener(LeftClick);
+        rightButton.onClick.AddListener(RightClick);
+        dropButton.onClick.AddListener(DropClick);
+
+    }
+
+    public void Update(){
+        if (isDone == 1){
+            winCheck();
+        }
+        leftButton.interactable = lInteract;
+        rightButton.interactable = rInteract;
+        dropButton.interactable = dInteract;
+
+        if (isDone != 1){
+            if (markerPos <= -maxPiecePlace){
+                lInteract = false;
+            }
+            else if (markerPos > -maxPiecePlace){
+                lInteract = true;
+            }
+
+            if (markerPos >= maxPiecePlace){
+                rInteract = false;
+            }
+            else if (markerPos < maxPiecePlace){
+                rInteract = true;
+            }
+        }
+
+    }
+
+    private int calcCount(int[] arr, int piece){
         int count = 0;
-        for (int i = 0; i < arr.Length; i++)
-        {
-            if (arr[i] == piece)
-            {
+        for (int i = 0; i < arr.Length; i++){
+            if (arr[i] == piece){
                 count += 1;
             }
         }
         return count;
     }
 
-    private int[,] putPiece(int[,] board, int row, int col, int piece)
-    {
+    private int[,] putPiece(int[,] board, int row, int col, int piece){
         board[row, col] = piece;
         return board;
     }
-    private bool isValidLocation(int[,] board, int col)
-    {
+    private bool isValidLocation(int[,] board, int col){
         return (board[ROW_COUNT - 1, col] == 0);
     }
-    private int getNextOpenRow(int[,] board, int col)
-    {
+    private int getNextOpenRow(int[,] board, int col){
 
-        for (int i = 0; i < ROW_COUNT; i++)
-        {
-            if (board[i, col] == 0)
-            {
+        for (int i = 0; i < ROW_COUNT; i++){
+            if (board[i, col] == 0){
                 return i;
             }
         }
         return 0;
     }
 
-    private bool isWinningMove(int[,] board, int piece)
-    {
-
-        for (int c = 0; c < COLUMN_COUNT - 3; c++)
-        {
-            for (int r = 0; r < ROW_COUNT; r++)
-            {
-                if (board[r, c] == piece && board[r, c + 1] == piece && board[r, c + 2] == piece && board[r, c + 3] == piece)
-                {
+    private bool isWinningMove(int[,] board, int piece){
+        for (int c = 0; c < COLUMN_COUNT - 3; c++){
+            for (int r = 0; r < ROW_COUNT; r++){
+                if (board[r, c] == piece && board[r, c + 1] == piece && board[r, c + 2] == piece && board[r, c + 3] == piece){
                     return true;
                 }
             }
         }
 
-        for (int c = 0; c < COLUMN_COUNT; c++)
-        {
-            for (int r = 0; r < ROW_COUNT - 3; r++)
-            {
-                if (board[r, c] == piece && board[r + 1, c] == piece && board[r + 2, c] == piece && board[r + 3, c] == piece)
-                {
+        for (int c = 0; c < COLUMN_COUNT; c++){
+            for (int r = 0; r < ROW_COUNT - 3; r++){
+                if (board[r, c] == piece && board[r + 1, c] == piece && board[r + 2, c] == piece && board[r + 3, c] == piece){
                     return true;
                 }
             }
         }
 
-        for (int c = 0; c < COLUMN_COUNT - 3; c++)
-        {
-            for (int r = 0; r < ROW_COUNT - 3; r++)
-            {
-                if (board[r, c] == piece && board[r + 1, c + 1] == piece && board[r + 2, c + 2] == piece && board[r + 3, c + 3] == piece)
-                {
+        for (int c = 0; c < COLUMN_COUNT - 3; c++){
+            for (int r = 0; r < ROW_COUNT - 3; r++){
+                if (board[r, c] == piece && board[r + 1, c + 1] == piece && board[r + 2, c + 2] == piece && board[r + 3, c + 3] == piece){
                     return true;
                 }
             }
 
         }
-        for (int c = 0; c < COLUMN_COUNT - 3; c++)
-        {
-            for (int r = 3; r < ROW_COUNT; r++)
-            {
-                if (board[r, c] == piece && board[r - 1, c + 1] == piece && board[r - 2, c + 2] == piece && board[r - 3, c + 3] == piece)
-                {
+        for (int c = 0; c < COLUMN_COUNT - 3; c++){
+            for (int r = 3; r < ROW_COUNT; r++){
+                if (board[r, c] == piece && board[r - 1, c + 1] == piece && board[r - 2, c + 2] == piece && board[r - 3, c + 3] == piece){
                     return true;
                 }
             }
@@ -127,12 +151,10 @@ public class gameMaster : MonoBehaviour
         return false;
     }
 
-    private int calcScore(int[] window, int piece)
-    {
+    private int calcScore(int[] window, int piece){
         int score = 0;
         int opponent = PLAYERNUMBER;
-        if (piece == PLAYERNUMBER)
-        {
+        if (piece == PLAYERNUMBER){
             opponent = AINUMBER;
         }
 
@@ -140,56 +162,74 @@ public class gameMaster : MonoBehaviour
         int countE = calcCount(window, 0);
         int countO = calcCount(window, opponent);
 
-        if (countP == 4)
-        {
-            score += 100;
-        }
-        else if (countP == 3 && countE == 1)
-        {
-            score += 5;
-        }
-        else if (countP == 2 && countE == 2)
-        {
-            score += 3;
+        if(winCount == 0){
+            if (countP == 4){
+                score += 100;
+            }
+            else if (countP == 3 && countE == 1){
+                score += 7;
+            }
+            else if (countP == 2 && countE == 2){
+                score += 5;
+            }
+
+            if (countO == 3 && countE == 1){
+                score -= 2;
+            }
         }
 
-        if (countO == 3 && countE == 1)
-        {
-            score -= 3;
+        else if(winCount == 1){
+            if (countP == 3 && countE == 1){
+                score -= 8;
+            }
+            else if (countP == 2 && countE == 2){
+                score -= 5;
+            }
+            
+            if(countP == 0){
+                score += 5;
+            }
+
+            if (countO == 3 && countE == 1){
+                score += 15;
+            }
+            else if (countO == 2 && countE == 2){
+                score += 10;
+            }
+            else if (countO == 1 && countE == 3){
+                score += 5;
+            }
         }
+
+        
         return score;
     }
 
 
-    private int findScore(int[,] board, int piece)
-    {
+    private int findScore(int[,] board, int piece){
         int score = 0;
+        
         int[] centerColArray = new int[ROW_COUNT];
 
-        for (int i = 0; i < ROW_COUNT; i++)
-        {
+        for (int i = 0; i < ROW_COUNT; i++){
             centerColArray[i] = board[i, 3];
         }
 
         int centerCount = calcCount(centerColArray, piece);
         score += centerCount * 3;
-
+        
         int[] rowArray;
         int[] colArray;
 
         //Score horizontal
-        for (int i = 0; i < ROW_COUNT; i++)
-        {
+        for (int i = 0; i < ROW_COUNT; i++){
             rowArray = new int[COLUMN_COUNT];
-            for (int j = 0; j < COLUMN_COUNT; j++)
-            {
+            for (int j = 0; j < COLUMN_COUNT; j++){
                 rowArray[j] = board[i, j];
             }
-            for (int k = 0; k < COLUMN_COUNT - 3; k++)
-            {
+            for (int k = 0; k < COLUMN_COUNT - 3; k++){
                 int[] window = new int[WINDOW_LENGTH];
-                for (int f = k; f < k + WINDOW_LENGTH; f++)
-                {
+                for (int f = k; f < k + WINDOW_LENGTH; f++){
                     window[f - k] = rowArray[f];
                 }
                 score += calcScore(window, piece);
@@ -198,18 +238,14 @@ public class gameMaster : MonoBehaviour
 
 
         //Score vertical
-        for (int i = 0; i < COLUMN_COUNT; i++)
-        {
+        for (int i = 0; i < COLUMN_COUNT; i++){
             colArray = new int[ROW_COUNT];
-            for (int j = 0; j < ROW_COUNT; j++)
-            {
+            for (int j = 0; j < ROW_COUNT; j++){
                 colArray[j] = board[j, i];
             }
-            for (int k = 0; k < ROW_COUNT - 3; k++)
-            {
+            for (int k = 0; k < ROW_COUNT - 3; k++){
                 int[] window = new int[WINDOW_LENGTH];
-                for (int f = k; f < k + WINDOW_LENGTH; f++)
-                {
+                for (int f = k; f < k + WINDOW_LENGTH; f++){
                     window[f - k] = colArray[f];
                 }
                 score += calcScore(window, piece);
@@ -217,13 +253,10 @@ public class gameMaster : MonoBehaviour
         }
 
         //Score Diag
-        for (int i = 0; i < ROW_COUNT - 3; i++)
-        {
-            for (int j = 0; j < COLUMN_COUNT - 3; j++)
-            {
+        for (int i = 0; i < ROW_COUNT - 3; i++){
+            for (int j = 0; j < COLUMN_COUNT - 3; j++){
                 int[] window = new int[WINDOW_LENGTH];
-                for (int k = 0; k < WINDOW_LENGTH; k++)
-                {
+                for (int k = 0; k < WINDOW_LENGTH; k++){
                     window[k] = board[i + k, j + k];
                 }
                 score += calcScore(window, piece);
@@ -231,13 +264,10 @@ public class gameMaster : MonoBehaviour
         }
 
         //Score Diag2
-        for (int i = 0; i < ROW_COUNT - 3; i++)
-        {
-            for (int j = 0; j < COLUMN_COUNT - 3; j++)
-            {
+        for (int i = 0; i < ROW_COUNT - 3; i++){
+            for (int j = 0; j < COLUMN_COUNT - 3; j++){
                 int[] window = new int[WINDOW_LENGTH];
-                for (int k = 0; k < WINDOW_LENGTH; k++)
-                {
+                for (int k = 0; k < WINDOW_LENGTH; k++){
                     window[k] = board[i + 3 - k, j + k];
                 }
                 score += calcScore(window, piece);
@@ -248,92 +278,76 @@ public class gameMaster : MonoBehaviour
     }
 
 
-    private bool isTerminalNode(int[,] board)
-    {
+    private bool isTerminalNode(int[,] board){
         return isWinningMove(board, PLAYERNUMBER) || isWinningMove(board, AINUMBER) || (getValidLocations(board).Count == 0);
     }
 
 
-    private int[] minimax(int[,] board, int depth, int alpha, int beta, bool maximizingPlayer)
-    {
+    private int[] minimax(int[,] board, int depth, int alpha, int beta, bool maximizingPlayer){
         ArrayList validLocations = getValidLocations(board);
         bool isTerminal = isTerminalNode(board);
 
-        if (depth == 0 || isTerminal == true)
-        {
-            if (isTerminal)
-            {
-                if (isWinningMove(board, AINUMBER))
-                {
+        if (depth == 0 || isTerminal == true){
+            if (isTerminal){
+                if (isWinningMove(board, AINUMBER)){
                     int[] x = { 0, 10000000 };
                     return x;
                 }
-                else if (isWinningMove(board, PLAYERNUMBER))
-                {
+                else if (isWinningMove(board, PLAYERNUMBER)){
                     int[] x = { 0, -10000000 };
                     return x;
                 }
-                else
-                {
+                else{
                     int[] x = { 0, 0 };
                     return x;
                 }
             }
-            else
-            {
+            else{
                 int[] x = { 0, findScore(board, AINUMBER) };
                 return x;
             }
         }
 
-        if (maximizingPlayer)
-        {
+        if (maximizingPlayer){
             int value = -100000000;
             System.Random random = new System.Random();
             int column = Convert.ToInt32(validLocations[random.Next(0, validLocations.Count)]);
 
-            foreach (int col in validLocations)
-            {
+            foreach (int col in validLocations){
                 int row = getNextOpenRow(board, col);
                 int[,] bCopy = board.Clone() as int[,];
                 bCopy = putPiece(bCopy, row, col, AINUMBER);
                 int newScore = minimax(bCopy, depth - 1, alpha, beta, false)[1];
 
-                if (newScore > value)
-                {
+                if (newScore > value){
                     value = newScore;
                     column = col;
                 }
                 alpha = Math.Max(alpha, value);
-                if (alpha >= beta)
-                {
+                if (alpha >= beta){
                     break;
                 }
             }
             int[] x = { column, value };
             return x;
         }
-        else
-        {
+        else{
             int value = 10000000;
             System.Random random = new System.Random();
             int column = Convert.ToInt32(validLocations[random.Next(0, validLocations.Count)]);
 
-            foreach (int col in validLocations)
-            {
+            foreach (int col in validLocations){
                 int row = getNextOpenRow(board, col);
                 int[,] bCopy = board.Clone() as int[,];
                 bCopy = putPiece(bCopy, row, col, PLAYERNUMBER);
                 int newScore = minimax(bCopy, depth - 1, alpha, beta, true)[1];
 
-                if (newScore < value)
-                {
+                if (newScore < value){
                     value = newScore;
                     column = col;
                 }
                 beta = Math.Min(beta, value);
-                if (alpha >= beta)
-                {
+                if (alpha >= beta){
                     break;
                 }
             }
@@ -342,25 +356,19 @@ public class gameMaster : MonoBehaviour
         }
     }
 
-    private ArrayList getValidLocations(int[,] board)
-    {
+    private ArrayList getValidLocations(int[,] board){
         ArrayList validLocations = new ArrayList();
-        for (int col = 0; col < COLUMN_COUNT; col++)
-        {
-            if (isValidLocation(board, col))
-            {
+        for (int col = 0; col < COLUMN_COUNT; col++){
+            if (isValidLocation(board, col)){
                 validLocations.Add(col);
             }
         }
         return validLocations;
     }
 
-    bool isDefaultImage()
-    {
-        for (int i = 0; i < DefaultImages.Length; i++)
-        {
-            if (spaceList[corrSpaces[bottomMark[colValue]]].GetComponent<Image>().sprite == DefaultImages[i])
-            {
+    bool isDefaultImage(){
+        for (int i = 0; i < DefaultImages.Length; i++){
+            if (spaceList[corrSpaces[bottomMark[colValue]]].GetComponent<Image>().sprite == DefaultImages[i]){
                 return true;
             }
         }
@@ -368,10 +376,8 @@ public class gameMaster : MonoBehaviour
 
     }
 
-    void DropClick()
-    {
-        if (isDefaultImage())
-        {
+    void DropClick(){
+        if (isDefaultImage()){
             spaceList[corrSpaces[bottomMark[colValue]]].GetComponent<Image>().sprite = PlayerImage;
             board = putPiece(board, 5 - bottomMark[colValue], colValue, corrPiece);
             bottomMark[colValue]--;
@@ -380,6 +386,7 @@ public class gameMaster : MonoBehaviour
             if (isWinningMove(board, corrPiece))
             {
                 Debug.Log("Player Wins");
+                StartCoroutine(winSound());
                 isDone = 1;
             }
         }
@@ -387,135 +394,113 @@ public class gameMaster : MonoBehaviour
         ColUpdate();
     }
 
-    void ColUpdate()
-    {
+    void ColUpdate(){
 
-        if (isDone == 1)
-        {
+        if (isDone == 1){
             winCheck();
         }
-        else
-        {
-
-            for (int i = 0; i < 7; i++)
-            {
-                if (markerPos == (singlePiecePlace * i) - maxPiecePlace)
-                {
+        else{
+            for (int i = 0; i < 7; i++){
+                if (markerPos == (singlePiecePlace * i) - maxPiecePlace){
                     colValue = i;
                     break;
                 }
             }
 
-            for (int j = 0; j < 6; j++)
-            {
+            for (int j = 0; j < 6; j++){
                 corrSpaces[j] = (7 * j) + colValue;
             }
 
-            if (bottomMark[colValue] <= -1)
-            {
+            if (bottomMark[colValue] <= -1){
                 dInteract = false;
                 bottomMark[colValue] = -1;
             }
-            else
-            {
+            else{
                 dInteract = true;
             }
 
-            if (dropCount % 2 == 0)
-            {
+            if (dropCount % 2 == 0){
                 corrImage = PlayerImage;
                 corrPiece = PLAYERNUMBER;
             }
-            else if (dropCount % 2 != 0)
-            {
+            else if (dropCount % 2 != 0){
                 corrImage = AIImage;
                 corrPiece = AINUMBER;
 
                 int[] arr = minimax(board, 5, -10000000, 1000000, true);
 
                 int col = arr[0];
-                if (isValidLocation(board, col))
-                {
+                if (isValidLocation(board, col)){
                     int row = getNextOpenRow(board, col);
                     board = putPiece(board, row, col, corrPiece);
 
                     spaceList[((spaceList.Length - 1) - (row * COLUMN_COUNT + (ROW_COUNT - col)))].GetComponent<Image>().sprite = corrImage;
-                    if (isWinningMove(board, corrPiece))
-                    {
+                    if (isWinningMove(board, corrPiece)){
                         Debug.Log("AI Wins");
-                        isDone = 1;
+                        winCount+=1;
+
+                        if (winCount == 2){
+                            StartCoroutine(winSound());
+                            isDone = 1;
+                        }
+                        else{
+                            StartCoroutine(clearBoards());
+                        }
+                        
+                        corrImage = PlayerImage;
+                        corrPiece = PLAYERNUMBER;
+                    }
+                    else if(dropCount == 41){
+                        Debug.Log("Tie");
+                        StartCoroutine(clearBoards());
+                        corrImage = PlayerImage;
+                        corrPiece = PLAYERNUMBER;
+                    }
+                    else{
+                        bottomMark[col]--;
+                        dropCount++;
+                        corrImage = PlayerImage;
+                        corrPiece = PLAYERNUMBER;
                     }
                 }
-                bottomMark[col]--;
-                dropCount++;
-                corrImage = PlayerImage;
-                corrPiece = PLAYERNUMBER;
+                
             }
             marker.GetComponent<Image>().sprite = corrImage;
             leftButton.interactable = lInteract;
             rightButton.interactable = rInteract;
             dropButton.interactable = dInteract;
         }
-
-
     }
 
-    void winCheck()
-    {
+    IEnumerator winSound(){
+        FindObjectOfType<AudioManager>().Play("Lock");
+        yield return new WaitForSeconds(2);
+    }
+
+    IEnumerator clearBoards(){
+        FindObjectOfType<AudioManager>().Play("WoodCrack");
+        yield return new WaitForSeconds(2);
+        board = new int[6,7];
+        bottomMark = new int[7] { 5, 5, 5, 5, 5, 5, 5 };
+        corrSpaces = new int[6];
+        for(int i = 0; i<spaceList.Length; i++){
+            spaceList[i].GetComponent<Image>().sprite = spaceListCopy[i];
+        }
+        dropCount = 0;
+        ColUpdate();
+    }
+
+    void winCheck(){
         lInteract = false;
         dInteract = false;
         rInteract = false;
     }
 
-    void Start()
-    {
-
-        ColUpdate();
-        markerPos = 0;
-        leftButton.onClick.AddListener(LeftClick);
-        rightButton.onClick.AddListener(RightClick);
-        dropButton.onClick.AddListener(DropClick);
-
-    }
-
-    public void Update()
-    {
-        if (isDone == 1)
-        {
-            winCheck();
-        }
-        leftButton.interactable = lInteract;
-        rightButton.interactable = rInteract;
-        dropButton.interactable = dInteract;
-
-        if (isDone != 1)
-        {
-            if (markerPos <= -maxPiecePlace)
-            {
-                lInteract = false;
-            }
-            else if (markerPos > -maxPiecePlace)
-            {
-                lInteract = true;
-            }
-
-            if (markerPos >= maxPiecePlace)
-            {
-                rInteract = false;
-            }
-            else if (markerPos < maxPiecePlace)
-            {
-                rInteract = true;
-            }
-        }
-
-    }
+    
 
 
-    public void LeftClick()
-    {
-        if (markerPos > -maxPiecePlace && lInteract == true)
-        {
+    public void LeftClick(){
+        if (markerPos > -maxPiecePlace && lInteract == true){
             lInteract = true;
             marker.transform.position += new Vector3(-singlePiecePlace, 0f, 0f);
             markerPos -= singlePiecePlace;
@@ -523,10 +508,8 @@ public class gameMaster : MonoBehaviour
         ColUpdate();
     }
 
-    public void RightClick()
-    {
-        if (markerPos < maxPiecePlace && rInteract == true)
-        {
+    public void RightClick(){
+        if (markerPos < maxPiecePlace && rInteract == true){
             rInteract = true;
             marker.transform.position += new Vector3(singlePiecePlace, 0f, 0f);
             markerPos += singlePiecePlace;

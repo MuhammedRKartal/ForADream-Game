@@ -8,7 +8,7 @@ public class SaveSystem : MonoBehaviour
 {
     public static void SaveScene (Scenee scene){
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "player.fun";
+        string path = Application.persistentDataPath + "/player.x";
         FileStream stream = new FileStream(path,FileMode.Create);
 
         SceneData data = new SceneData(scene);
@@ -19,7 +19,7 @@ public class SaveSystem : MonoBehaviour
     }
 
     public static SceneData LoadScene(){
-        string path = Application.persistentDataPath + "player.fun";
+        string path = Application.persistentDataPath + "/player.x";
 
         if(File.Exists(path)){
             BinaryFormatter formatter = new BinaryFormatter();

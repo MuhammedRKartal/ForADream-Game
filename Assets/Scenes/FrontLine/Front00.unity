@@ -3106,7 +3106,7 @@ MonoBehaviour:
         m_CallState: 2
   animator: {fileID: 1949416998}
   button: {fileID: 1949416996}
-  sname: MiddleInWar
+  sname: Middle0
 --- !u!61 &1143084479
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4218,7 +4218,12 @@ MonoBehaviour:
         m_CallState: 2
   animator: {fileID: 0}
   button: {fileID: 0}
+  kurek: {fileID: 0}
   player: {fileID: 0}
+  counter: 0
+  moloz: {fileID: 0}
+  molozArray: []
+  llider: {fileID: 0}
 --- !u!61 &1368996404
 BoxCollider2D:
   m_ObjectHideFlags: 0
