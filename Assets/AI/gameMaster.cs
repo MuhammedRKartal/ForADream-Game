@@ -167,10 +167,10 @@ public class gameMaster : MonoBehaviour
                 score += 100;
             }
             else if (countP == 3 && countE == 1){
-                score += 7;
+                score += 10;
             }
             else if (countP == 2 && countE == 2){
-                score += 5;
+                score += 2;
             }
 
             if (countO == 3 && countE == 1){
