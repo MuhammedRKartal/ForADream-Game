@@ -1672,17 +1672,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1085841552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc0323fcb96c13e4c8554bd3b02f4452, type: 3}
+  m_Script: {fileID: 11500000, guid: 0543bcecbce5eac44b188f6fe7ba4c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isInRange: 0
-  interactKey: 101
+  interactKey: 0
   interactAction:
     m_PersistentCalls:
       m_Calls: []
   animator: {fileID: 66512278}
   button: {fileID: 66512276}
-  sname: MiddleZone
+  sname: 
 --- !u!61 &1085841555
 BoxCollider2D:
   m_ObjectHideFlags: 0
