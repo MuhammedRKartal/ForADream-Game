@@ -28,14 +28,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         b12.color = new Color(255, 255, 255, 1);
-        //b12.color = new Color(255, 255, 255, 0.1F);
-        //StartCoroutine(AddAndPlay(2));
         StartCoroutine("Wait");
         TextMesh score_label = GameObject.Find("ScoreLabel").GetComponent<TextMesh>();
-        
         score_manager = new ScoreManager(score_label);
-        //Play();
+        Play();
     }
+
     IEnumerator Wait()
     {
         int index = -1;
@@ -171,10 +169,6 @@ public class GameManager : MonoBehaviour
         AudioSource audio_source = FindObjectOfType<AudioSource>();
         audio_source.clip = game_over_clip;
         audio_source.Play();
-        
-        
-
-
     }
 
     private IEnumerator ScaleTo(float to, float seconds)
