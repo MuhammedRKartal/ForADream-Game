@@ -19,6 +19,7 @@ public class MyButton : MonoBehaviour
     private AudioSource audio_source;
     private Melody melody;
     private GameManager game_manager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,19 +31,12 @@ public class MyButton : MonoBehaviour
         SetColor(ButtonColorTypes.PASSIVE);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void OnMouseDown()
     {
         if (game_manager.GetState() != GameManager.GameState.USER) return;
         melody.Play();
         game_manager.CheckUserSelect(melody);
-        
-        
     }
 
     void SetColor(ButtonColorTypes color)
