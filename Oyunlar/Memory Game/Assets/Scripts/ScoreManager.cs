@@ -21,9 +21,6 @@ public class ScoreManager
         score_label.text = score.ToString();
         
     }
-
-    
-
     public void Reset()
     {
         score = 0;

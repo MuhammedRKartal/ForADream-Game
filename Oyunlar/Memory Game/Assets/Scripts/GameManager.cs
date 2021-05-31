@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -143,8 +144,8 @@ public class GameManager : MonoBehaviour
                 if (counter == 7)
                 {
                     Destroy(gameObject);
-
-
+                    SceneManager.LoadScene(sceneName: "13CommTentAfterGame");
+                    
                 }
                 b12.color = new Color(255, 255, 255, 1);
                 StartCoroutine(AddAndPlay(2));
@@ -197,6 +198,7 @@ public class GameManager : MonoBehaviour
         StopCoroutine("ScaleTo");
         yield break;
     }
+
     private void Reset()
     {
         melody_sheet = new List<Melody>();
