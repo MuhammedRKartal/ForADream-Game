@@ -25,6 +25,10 @@ public class Maze : MonoBehaviour
     public GameObject hwall,vwall;
 	public int[,] Cells;
     public Transform player,goal;
+
+	private float timer = 0;
+    private float timerMax = 0;
+    private bool waiting = true;
     
     public int[,] Initialise(int rows, int columns)
 	{
@@ -145,44 +149,50 @@ public class Maze : MonoBehaviour
         Print(Cells);
     }
 
+	public bool Waited(float seconds)
+    {
+        timerMax = seconds;
+        timer += Time.deltaTime;
+        if (timer >= timerMax) {return true;}
+        return false;
+    }
+
     // Update is called once per frame
     void Update()
     {
-
-        if (player.position == new Vector3(9,9,-1)){
-            SceneManager.LoadScene(sceneName: sname);
-        }
-        else{
-            var directions = (Directions)Cells[yP, xP];
-            if (Input.GetKeyDown(KeyCode.W)){ 
-                if(directions.HasFlag(Directions.S)== true){
-                    player.Translate(new Vector2(0, 1.0f) * 1.0f);
-                    yP++;
+		if (player.position == new Vector3(9,9,-1)){
+			SceneManager.LoadScene(sceneName: sname);
+		}
+		else{
+			var directions = (Directions)Cells[yP, xP];
+			if (Input.GetKeyDown(KeyCode.W)){ 
+				if(directions.HasFlag(Directions.S)== true){
+					player.Translate(new Vector2(0, 1.0f) * 1.0f);
+					yP++;
 					FindObjectOfType<AudioManager>().Play("Maze");
-                }
-            }
-            else if (Input.GetKeyDown(KeyCode.S)){
-                if(directions.HasFlag(Directions.N)== true){
-                    player.Translate(new Vector2(0, -1.0f) * 1.0f);
-                    yP--;
+				}
+			}
+			else if (Input.GetKeyDown(KeyCode.S)){
+				if(directions.HasFlag(Directions.N)== true){
+					player.Translate(new Vector2(0, -1.0f) * 1.0f);
+					yP--;
 					FindObjectOfType<AudioManager>().Play("Maze");
-                }
-            }
-            else if (Input.GetKeyDown(KeyCode.A)){
-                if(directions.HasFlag(Directions.W)== true){
-                    player.Translate(new Vector2(-1.0f, 0) * 1.0f);
-                    xP--;
+				}
+			}
+			else if (Input.GetKeyDown(KeyCode.A)){
+				if(directions.HasFlag(Directions.W)== true){
+					player.Translate(new Vector2(-1.0f, 0) * 1.0f);
+					xP--;
 					FindObjectOfType<AudioManager>().Play("Maze");
-                }
-            }
-            else if (Input.GetKeyDown(KeyCode.D)){
-                if(directions.HasFlag(Directions.E)== true){
-                    player.Translate(new Vector2(1.0f, 0) * 1.0f);
-                    xP++;
+				}
+			}
+			else if (Input.GetKeyDown(KeyCode.D)){
+				if(directions.HasFlag(Directions.E)== true){
+					player.Translate(new Vector2(1.0f, 0) * 1.0f);
+					xP++;
 					FindObjectOfType<AudioManager>().Play("Maze");
-                }
-            }
-        }
+				}
+			}
+		}
 	}
-    
 }

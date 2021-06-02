@@ -24,7 +24,6 @@ public class TakeSomethingAndNext : MonoBehaviour
     public int counter = 0;
     public GameObject[] openDoor;
     public GameObject[] collTrigger;
-    
 
     void Start()
     {
@@ -34,11 +33,6 @@ public class TakeSomethingAndNext : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isInRange){
-            if(Input.GetKeyDown(interactKey)){
-                interactAction.Invoke();
-            }
-        }
         if(waiting == true){
             if(!Waited(0.75f)){
                 player.GetComponent<PlayerMovement>().enabled = false;
@@ -54,16 +48,18 @@ public class TakeSomethingAndNext : MonoBehaviour
             }    
         }
         else{
-            if(act == false){
-                if(counter == 1){
-                    foreach (GameObject x in collTrigger){
-                        x.SetActive(false);
-                    }
-                    foreach (GameObject x in openDoor){
-                        x.SetActive(true);
-                    }
+            if(isInRange){
+                if(Input.GetKeyDown(interactKey)){
+                    interactAction.Invoke();
                 }
-                
+            }
+            if(counter == 1){
+                foreach (GameObject x in collTrigger){
+                    x.SetActive(false);
+                }
+                foreach (GameObject x in openDoor){
+                    x.SetActive(true);
+                }
             }
         }
         
@@ -99,7 +95,7 @@ public class TakeSomethingAndNext : MonoBehaviour
 
     public void put(){
         player.GetComponent<Animator>().SetBool("isPutting", true);
-        FindObjectOfType<AudioManager>().Play("Take");
+        FindObjectOfType<AudioManager>().Play("Put");
         waiting = true;    
     }
 

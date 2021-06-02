@@ -11,5 +11,4 @@ public class BGMusic : MonoBehaviour
         FindObjectOfType<AudioManager>().Play(musicName);
     }
 
-    
 }

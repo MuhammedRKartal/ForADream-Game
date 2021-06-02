@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4471538433652565486}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,13 +81,13 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Digging
-    clip: {fileID: 8300000, guid: d841d1f42339a7e4aaee674984a755f0, type: 3}
+    clip: {fileID: 8300000, guid: 54dc195b00f183d4da757d1d1d084f63, type: 3}
     volume: 0.817
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Maze
-    clip: {fileID: 8300000, guid: 80319b132df651e45a4a0ffbf39f688e, type: 3}
+    clip: {fileID: 8300000, guid: 3cb02419c7f25004d8022e57e1f9ab6f, type: 3}
     volume: 0.817
     pitch: 1
     loop: 0
@@ -112,6 +112,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Bell
     clip: {fileID: 8300000, guid: 2b795923b4d07024b9dc32c2812a4dc5, type: 3}
+    volume: 0.817
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Door
+    clip: {fileID: 8300000, guid: e07362f7ff21f64498885f8c7f0d6f3c, type: 3}
+    volume: 0.817
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Put
+    clip: {fileID: 8300000, guid: 0b79f87063dcbe945ab8aee2944af914, type: 3}
     volume: 0.817
     pitch: 1
     loop: 0

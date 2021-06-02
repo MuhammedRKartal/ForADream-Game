@@ -47,4 +47,8 @@ public class NextSceneTrigger : MonoBehaviour
         }
     }
 
+    public void doorVoice(){
+        FindObjectOfType<AudioManager>().Play("Door");
+    }
+
 }

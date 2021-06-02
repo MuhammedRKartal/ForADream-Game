@@ -12,12 +12,11 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if (instance == null){
-            instance = this;
-        }
-        else{
-            Destroy(gameObject);
-            return;
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("AudioManager");
+
+        if (objs.Length > 1)
+        {
+            Destroy(objs[0]);
         }
 
         DontDestroyOnLoad(gameObject);
