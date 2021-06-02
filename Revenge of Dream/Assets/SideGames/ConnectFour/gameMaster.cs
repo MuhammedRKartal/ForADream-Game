@@ -382,6 +382,7 @@ public class gameMaster : MonoBehaviour
     void DropClick(){
         if (isDefaultImage()){
             spaceList[corrSpaces[bottomMark[colValue]]].GetComponent<Image>().sprite = PlayerImage;
+            FindObjectOfType<AudioManager>().Play("ConnectFour");
             board = putPiece(board, 5 - bottomMark[colValue], colValue, corrPiece);
             bottomMark[colValue]--;
             dropCount++;
@@ -439,6 +440,7 @@ public class gameMaster : MonoBehaviour
                     board = putPiece(board, row, col, corrPiece);
 
                     spaceList[((spaceList.Length - 1) - (row * COLUMN_COUNT + (ROW_COUNT - col)))].GetComponent<Image>().sprite = corrImage;
+                    FindObjectOfType<AudioManager>().Play("ConnectFour");
                     if (isWinningMove(board, corrPiece)){
                         Debug.Log("AI Wins");
                         winCount+=1;

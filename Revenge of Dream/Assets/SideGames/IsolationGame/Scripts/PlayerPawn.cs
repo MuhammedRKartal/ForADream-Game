@@ -87,37 +87,20 @@ public class PlayerPawn : MonoBehaviour
         {
             AIMove();
         }
-        /*
-        else if (currentGameplay == Gameplay.Random)
-        {
-            RandomMove();
-        }
-        */
     }
-    /*
-    private void RandomMove()
-    {
-        if(availableMoves.Count> 0)
-        {
-            int ind = UnityEngine.Random.Range(0, availableMoves.Count);
-            Vector3Int randomPos = availableMoves[ind];
-            CurrentTilePos = randomPos;
-            transform.position = GameBoard.tileMap.GetCellCenterWorld(randomPos);
-            hasStartedPlaying = true;
-            GameManager.Instance.TurnPlayed(randomPos);
-        }
-    }
-    */
+    
     private void AIMove()
     {
         Node root = MakeTree();
         Minimax(root,GameManager.Instance.minimaxDepth,-Mathf.Infinity, Mathf.Infinity,true);
         if(bestState != null)
         {
-            if(bestState.nextMovesBelongsTo == PlayerNum.Player1)
+            if(bestState.nextMovesBelongsTo == PlayerNum.Player1){
                 CurrentTilePos = bestState.opponentPos;
-            else
+            }
+            else{
                 CurrentTilePos = bestState.activePlayerPos;
+            }
             transform.position = GameBoard.tileMap.GetCellCenterWorld(CurrentTilePos);
             hasStartedPlaying = true;
             GameManager.Instance.TurnPlayed(CurrentTilePos);

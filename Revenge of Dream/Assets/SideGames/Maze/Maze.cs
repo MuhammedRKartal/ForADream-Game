@@ -158,24 +158,28 @@ public class Maze : MonoBehaviour
                 if(directions.HasFlag(Directions.S)== true){
                     player.Translate(new Vector2(0, 1.0f) * 1.0f);
                     yP++;
+					FindObjectOfType<AudioManager>().Play("Maze");
                 }
             }
             else if (Input.GetKeyDown(KeyCode.S)){
                 if(directions.HasFlag(Directions.N)== true){
                     player.Translate(new Vector2(0, -1.0f) * 1.0f);
                     yP--;
+					FindObjectOfType<AudioManager>().Play("Maze");
                 }
             }
             else if (Input.GetKeyDown(KeyCode.A)){
                 if(directions.HasFlag(Directions.W)== true){
                     player.Translate(new Vector2(-1.0f, 0) * 1.0f);
                     xP--;
+					FindObjectOfType<AudioManager>().Play("Maze");
                 }
             }
             else if (Input.GetKeyDown(KeyCode.D)){
                 if(directions.HasFlag(Directions.E)== true){
                     player.Translate(new Vector2(1.0f, 0) * 1.0f);
                     xP++;
+					FindObjectOfType<AudioManager>().Play("Maze");
                 }
             }
         }

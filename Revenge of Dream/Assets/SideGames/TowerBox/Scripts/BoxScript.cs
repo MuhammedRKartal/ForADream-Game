@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class BoxScript : MonoBehaviour
 {
-    private float min_X = -4.5f, max_X = 3.0f;
+    private float min_X = -4.5f, max_X = 3f;
 
     private bool canMove;
-    private float move_Speed = 3f;
+    private float move_Speed = 6f;
 
     private Rigidbody2D myBody;
 
@@ -72,7 +72,7 @@ public class BoxScript : MonoBehaviour
     {
         if (gameOver)
             return;
-
+        
         ignoreCollision = true;
         ignoreTrigger = true;
 
@@ -88,10 +88,12 @@ public class BoxScript : MonoBehaviour
         if (target.gameObject.tag == "platform")
         {
             Invoke("Landed", 2f);
+            FindObjectOfType<AudioManager>().Play("BoxTower");
             ignoreCollision = true;
         }
         if (target.gameObject.tag == "box")
         {
+            FindObjectOfType<AudioManager>().Play("BoxTower");
             Invoke("Landed", 2f);
             ignoreCollision = true;
 

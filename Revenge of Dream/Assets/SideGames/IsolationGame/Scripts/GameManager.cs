@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,10 +17,13 @@ public class GameManager : MonoBehaviour
     public event Action<EndState> onEndState;
     public event Action<Gameplay> onGameplayChanged;
     public event Action<Vector3Int> onTurnPlayed;
+    
 
     public int minimaxDepth;
     public int treeDepth;
     public HeuristicType heuristicType;
+
+    public string sname;
 
     private void Awake()
     {
@@ -39,20 +43,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetHeuristicType(int heuristicType)
-    {
-        if (heuristicType == 0)
-        {
-            this.heuristicType = HeuristicType.Simple;
-        }
-        else if(heuristicType == 1){
-            this.heuristicType = HeuristicType.Defensive;
-        }
-        else if(heuristicType == 2){
-            this.heuristicType = HeuristicType.Offensive;
+    void Update(){
+        Debug.Log(PlayerPrefs.GetInt("playCount"));
+        if(PlayerPrefs.GetInt("playCount") >= 2){
+            SceneManager.LoadScene(sceneName: sname);
         }
     }
-    
+
     public void CreateGrid(int x, int y)
     {
         onGridSizeChanged?.Invoke(x, y);
@@ -87,6 +84,7 @@ public class GameManager : MonoBehaviour
 
     public void TurnPlayed(Vector3Int tilePos)
     {
+        FindObjectOfType<AudioManager>().Play("Isolation");
         onTurnPlayed?.Invoke(tilePos);
     }
 }

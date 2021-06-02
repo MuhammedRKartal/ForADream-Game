@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public enum EndState
 {
@@ -20,6 +21,9 @@ public class GameBoard : MonoBehaviour
     public PlayerPawn player1;
     public PlayerPawn player2;
 
+    public int playCount;
+    
+
     private void Awake()
     {
         tileMap = GetComponentInChildren<Tilemap>();
@@ -27,6 +31,7 @@ public class GameBoard : MonoBehaviour
 
     private void Start()
     {
+        
         GameManager.Instance.onGridSizeChanged += ChangeGridSize;
         GameManager.Instance.onGameStarted += StartGame;
         GameManager.Instance.OnInput += CheckInput;
@@ -71,18 +76,22 @@ public class GameBoard : MonoBehaviour
         player2.UpdateAvaliableMoves(gameGrid);
         if(player1.availableMoves.Count == 0  && player2.availableMoves.Count == 0)
         {
-            //Draw
+            
+            PlayerPrefs.SetInt("playCount", PlayerPrefs.GetInt("playCount")+1);
             GameManager.Instance.BroadcastEndState(EndState.Draw);
+
         }
         else if(player1.availableMoves.Count == 0)
         {
-            //Player2 Win
+            playCount++;
+            PlayerPrefs.SetInt("playCount", PlayerPrefs.GetInt("playCount")+1);
             GameManager.Instance.BroadcastEndState(EndState.Player2Won);
         }
         else if(player2.availableMoves.Count == 0)
         {
             //Player1 Win
             GameManager.Instance.BroadcastEndState(EndState.Player1Won);
+            SceneManager.LoadScene(sceneName: "61WinScene");
         }
     }
 
@@ -114,35 +123,6 @@ public class GameBoard : MonoBehaviour
                 return true;
         }
         return false;
-            
-        /*
-        Vector3 playerPos;
-        if (isPlayer1Turn)
-            playerPos = player1.CurrentPos;
-        else
-            playerPos = player2.CurrentPos;
-        Vector3Int playerTilePos = tileMap.WorldToCell(playerPos);
-        if (playerPos == tilePos)
-            return false;
-        int x = Mathf.Abs(playerTilePos.x - tilePos.x);
-        int y = Mathf.Abs(playerTilePos.y - tilePos.y);
-        Vector3Int offset = Vector3Int.zero;
-        if(x > 0 && y > 0)
-        {
-
-        }
-        else if(x > 0)
-        {
-
-        }
-        else if(y > 0)
-        {
-
-        }
-        for (Vector3Int pos = playerTilePos; pos != tilePos; )
-        {
-
-        }*/
     }
 
     private void ExploreTile(Vector3Int tilePos)

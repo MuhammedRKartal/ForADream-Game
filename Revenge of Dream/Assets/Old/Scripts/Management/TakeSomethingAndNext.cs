@@ -93,11 +93,13 @@ public class TakeSomethingAndNext : MonoBehaviour
 
     public void take(){
         player.GetComponent<Animator>().SetBool("isTaking", true);
-        waiting = true;    
+        FindObjectOfType<AudioManager>().Play("Take");
+        waiting = true;
     }
 
     public void put(){
         player.GetComponent<Animator>().SetBool("isPutting", true);
+        FindObjectOfType<AudioManager>().Play("Take");
         waiting = true;    
     }
 

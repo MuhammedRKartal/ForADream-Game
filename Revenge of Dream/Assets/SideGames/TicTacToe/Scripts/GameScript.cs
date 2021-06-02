@@ -44,6 +44,7 @@ public class GameScript : MonoBehaviour
         if (Turn == Seed.CROSS)
         {
             allSpawns[id] = Instantiate(cross, emptycell.transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("TTT");
             Destroy(emptycell);
             player[id] = Turn;
             if (Won(Turn))
@@ -81,6 +82,7 @@ public class GameScript : MonoBehaviour
             //if there is a best position
             if (bestPos > -1){
                 allSpawns[bestPos] = Instantiate(circle, allSpawns[bestPos].transform.position, Quaternion.identity);
+                FindObjectOfType<AudioManager>().Play("TTT");
 
                 string x = "EmptyCell0 (" + bestPos + ")"; 
                 if(bestPos == 0){

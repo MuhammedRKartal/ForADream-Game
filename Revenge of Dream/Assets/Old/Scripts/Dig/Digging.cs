@@ -101,8 +101,8 @@ public class Digging : MonoBehaviour
     public void dig(){
         Debug.Log("hey");
         player.GetComponent<Animator>().SetBool("isDigging", true);
-        
         kurek.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("Digging");
         waiting = true;   
     }  
 }
