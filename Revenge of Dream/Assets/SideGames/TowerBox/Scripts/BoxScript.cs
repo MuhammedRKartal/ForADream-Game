@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class BoxScript : MonoBehaviour
 {
-    private float min_X = -2.2f, max_X = 2.2f;
+    private float min_X = -4.5f, max_X = 3.0f;
 
     private bool canMove;
     private float move_Speed = 3f;
@@ -57,6 +57,10 @@ public class BoxScript : MonoBehaviour
             transform.position = temp;
         }
     }
+    void RestartGame()
+    {
+        GameplayController.instance.RestartGame();
+    }
 
     public void DropBox()
     {
@@ -74,11 +78,6 @@ public class BoxScript : MonoBehaviour
 
         GameplayController.instance.SpawnNewBox();
         GameplayController.instance.MoveCamera();
-    }
-
-    void RestartGame()
-    {
-        GameplayController.instance.RestartGame();
     }
 
     
@@ -108,7 +107,6 @@ public class BoxScript : MonoBehaviour
                 CancelInvoke("Landed");
                 gameOver = true;
                 ignoreTrigger = true;
-
                 Invoke("RestartGame", 2f);
             }
 

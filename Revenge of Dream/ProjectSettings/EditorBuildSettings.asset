@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/AllInLine/8Dialog.unity
     guid: c6f1e339dc1cb3947a36173567bb5bf0
   - enabled: 1
+    path: Assets/AllInLine/CityAfterTT.unity
+    guid: 4bd1584625a4b6642b57fe4a59845589
+  - enabled: 1
     path: Assets/AllInLine/9WeaponTentAfterDialogue.unity
     guid: 9fec1a42c1a9501449182ad79fa3863f
   - enabled: 1

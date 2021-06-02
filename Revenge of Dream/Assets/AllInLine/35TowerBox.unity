@@ -265,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   box_Prefab: {fileID: 4163052645614478471, guid: e0cab4d09b50c4546a8dcb8c0f3e9f80,
     type: 3}
+  control: {fileID: 891248196}
 --- !u!1 &503485026
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +556,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   box_Spawner: {fileID: 352442499}
   currentBox: {fileID: 0}
+  sname: 36DialogAfterBox
   cameraScript: {fileID: 519420030}
+  moveCount: 0
   countDown: {fileID: 503485028}
 --- !u!4 &891248197
 Transform:

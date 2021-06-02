@@ -15,6 +15,7 @@ public class GameScript : MonoBehaviour
     public Seed Turn;
 
     public string sname;
+    public string sname2;
     public bool isEasy = false;
 
     public GameObject[] allSpawns = new GameObject[9];
@@ -94,7 +95,8 @@ public class GameScript : MonoBehaviour
             {
                 // change the turn
                 Turn = Seed.EMPTY;
-                SceneManager.LoadScene(sceneName: sname);
+                PlayerPrefs.SetInt("playCount", 0);
+                SceneManager.LoadScene(sceneName: sname2);
             }
             else
             {
@@ -108,7 +110,7 @@ public class GameScript : MonoBehaviour
         {
             // change the turn
             Turn = Seed.EMPTY;
-            SceneManager.LoadScene(sceneName: sname);
+            SceneManager.LoadScene(sceneName: sname2);
         } 
     }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameplayController : MonoBehaviour
 {
@@ -9,15 +10,14 @@ public class GameplayController : MonoBehaviour
     public BoxSpawner box_Spawner;
     [HideInInspector]
     public BoxScript currentBox;
+    public string sname;
 
     public CameraFollow cameraScript;
-    private int moveCount;
+    public int moveCount;
 
 
     public Text countDown;
 
-
-    
     void Awake()
     {
         if (instance == null)
@@ -28,12 +28,13 @@ public class GameplayController : MonoBehaviour
     void Start()
     {
         box_Spawner.SpawnBox();
-        
+        moveCount=0;
     }
 
     
     void Update()
     {
+        Debug.Log(moveCount);
         DetectInput();
         
     }
@@ -64,19 +65,14 @@ public class GameplayController : MonoBehaviour
         }
         if (moveCount == 5)
         {
-            
-                Time.timeScale = 0f;
-                countDown.text = "WIN!!";
-            
-            
+                SceneManager.LoadScene(sceneName: sname);
         }
     }
-  
+
     public void RestartGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
-
     
 }
