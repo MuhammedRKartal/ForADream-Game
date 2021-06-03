@@ -46,7 +46,7 @@ MonoBehaviour:
   sounds:
   - name: Fires
     clip: {fileID: 8300000, guid: 89cd0777bba594747a916b6a890328d3, type: 3}
-    volume: 0.72
+    volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -130,49 +130,49 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: DrunkenSailor
     clip: {fileID: 8300000, guid: dfc44b4b5dc15b3408975bf9ec2a71c4, type: 3}
-    volume: 0.6
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Ludavico
     clip: {fileID: 8300000, guid: 81a860dd50a283f4995ec079dc0f27d8, type: 3}
-    volume: 0.6
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Sonata1
     clip: {fileID: 8300000, guid: 1f744f055b3b48048b4bffa5021d359e, type: 3}
-    volume: 0.6
+    volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Sonata2
     clip: {fileID: 8300000, guid: 568f0ed11f3497f43b1639cc3226b054, type: 3}
-    volume: 0.6
+    volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Sonata3
     clip: {fileID: 8300000, guid: 13c373300931a2049ab8d01dc399a4b9, type: 3}
-    volume: 0.6
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: ValseAmelie
     clip: {fileID: 8300000, guid: f3d24cde5ed03814da2126a87909228e, type: 3}
-    volume: 0.817
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Scott
     clip: {fileID: 8300000, guid: a3744435a33515a4da066e13f35ef7a8, type: 3}
-    volume: 0.817
+    volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Crumple
     clip: {fileID: 8300000, guid: dd291f9f8d6f91c4a8c3dfddf39242f3, type: 3}
-    volume: 0.6
+    volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}

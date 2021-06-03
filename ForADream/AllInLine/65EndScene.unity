@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14121865, y: 0}
   m_AnchorMax: {x: 0.6688907, y: 0.8628519}
-  m_AnchoredPosition: {x: -3, y: -145.1}
-  m_SizeDelta: {x: -6.371582, y: 329.01807}
+  m_AnchoredPosition: {x: -3, y: -321.2}
+  m_SizeDelta: {x: -6.371582, y: 681.23047}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &125747504
 MonoBehaviour:
@@ -191,7 +191,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Team Leader \n\nLead Programmer\n\nProgrammers\n\n\nAnimation Designer\n\nCharacter
-    Designers\n\n\nObject Designer\n\n\nBackground Theme Designers\n\n\n\n\nSpecial
+    Designers\n\n\nObject Designer\n\n\nBackground Theme Designers\n\n\nMusic Editors\n\n\nSpecial
     Thanks\n\n\n"
 --- !u!222 &125747505
 CanvasRenderer:
@@ -663,8 +663,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Muhammed R. Kartal \n\nMuhammed R. Kartal \n\nAtakan Ermete\nZeynep Ayy\xFCce
     \xC7ay\n\nMuhammed R. Kartal\n\nMuhammed R. Kartal\nZeynep Ayy\xFCce \xC7ay\n\nAtakan
-    Ermete\nZeynep Ayy\xFCce \xC7ay\n\nAtakan Ermete\nZeynep Ayy\xFCce \xC7ay\n\nTuna
-    \xC7akar\n\n"
+    Ermete\nZeynep Ayy\xFCce \xC7ay\n\nAtakan Ermete\nZeynep Ayy\xFCce \xC7ay\n\nAtakan
+    Ermete\nMuhammed R. Kartal\n\nTuna \xC7akar\n\n"
 --- !u!222 &1919070956
 CanvasRenderer:
   m_ObjectHideFlags: 0
