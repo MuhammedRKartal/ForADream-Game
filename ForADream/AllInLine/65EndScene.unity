@@ -191,7 +191,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Team Leader \n\nLead Programmer\n\nProgrammers\n\n\nAnimation Designer\n\nCharacter
-    Designers\n\n\nObject Designer\n\n\nBackground Theme Designers\n\n\nSpecial Thanks\n\n\n"
+    Designers\n\n\nObject Designer\n\n\nBackground Theme Designers\n\n\n\n\nSpecial
+    Thanks\n\n\n"
 --- !u!222 &125747505
 CanvasRenderer:
   m_ObjectHideFlags: 0

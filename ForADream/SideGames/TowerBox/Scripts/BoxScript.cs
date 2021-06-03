@@ -87,14 +87,14 @@ public class BoxScript : MonoBehaviour
             return;
         if (target.gameObject.tag == "platform")
         {
-            Invoke("Landed", 2f);
+            Invoke("Landed", 3f);
             FindObjectOfType<AudioManager>().Play("BoxTower");
             ignoreCollision = true;
         }
         if (target.gameObject.tag == "box")
         {
             FindObjectOfType<AudioManager>().Play("BoxTower");
-            Invoke("Landed", 2f);
+            Invoke("Landed", 3f);
             ignoreCollision = true;
 
            
@@ -109,7 +109,7 @@ public class BoxScript : MonoBehaviour
                 CancelInvoke("Landed");
                 gameOver = true;
                 ignoreTrigger = true;
-                Invoke("RestartGame", 2f);
+                Invoke("RestartGame", 1f);
             }
 
         }
