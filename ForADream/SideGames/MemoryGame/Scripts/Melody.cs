@@ -22,6 +22,6 @@ public class Melody
     {
         button.SwitchColor();
         audio_source.clip = audio_clip;
-        audio_source.Play();
+        //audio_source.Play();
     }
 }

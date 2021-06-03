@@ -722,11 +722,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 7529509428672169335}
   moveSpeed: 6
-  kurek: {fileID: 0}
-  counter: 0
-  moloz: {fileID: 0}
-  molozArray: []
-  llider: {fileID: 0}
 --- !u!1 &7529509428770706695
 GameObject:
   m_ObjectHideFlags: 0

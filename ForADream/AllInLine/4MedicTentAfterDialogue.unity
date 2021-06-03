@@ -3526,22 +3526,22 @@ PrefabInstance:
     - target: {fileID: 7529509427934299466, guid: c562caef046c71542bfa8ceb20c3601c,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 9
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7529509428040369314, guid: c562caef046c71542bfa8ceb20c3601c,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7529509428420353731, guid: c562caef046c71542bfa8ceb20c3601c,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 12
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7529509428443060916, guid: c562caef046c71542bfa8ceb20c3601c,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 11
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 7529509428672169329, guid: c562caef046c71542bfa8ceb20c3601c,
         type: 3}
@@ -3551,12 +3551,17 @@ PrefabInstance:
     - target: {fileID: 7529509429019223495, guid: c562caef046c71542bfa8ceb20c3601c,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 11
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 7529509429147384235, guid: c562caef046c71542bfa8ceb20c3601c,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 8
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529509429405780103, guid: c562caef046c71542bfa8ceb20c3601c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7529509429485867574, guid: c562caef046c71542bfa8ceb20c3601c,
         type: 3}
@@ -3576,7 +3581,7 @@ PrefabInstance:
     - target: {fileID: 7529509429959577255, guid: c562caef046c71542bfa8ceb20c3601c,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 7
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8320041363225397918, guid: c562caef046c71542bfa8ceb20c3601c,
         type: 3}

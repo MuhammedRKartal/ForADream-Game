@@ -2778,7 +2778,7 @@ MonoBehaviour:
   counterLimit: 0
   animator: {fileID: 589481218}
   animator2: {fileID: 1035082151}
-  sname: 65End
+  sname: 65EndScene
 --- !u!4 &962923684
 Transform:
   m_ObjectHideFlags: 0
